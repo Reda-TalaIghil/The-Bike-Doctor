@@ -1,0 +1,212 @@
+@import './variables.css';
+@import './shared.css';
+
+.confirmation-container {
+  background: var(--paper);
+  display: flex;
+  justify-content: center;
+  padding: 2rem clamp(1rem, 4vw, 2.5rem) 3rem;
+}
+
+.confirmation-card {
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-lg);
+  max-width: 560px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 var(--rust);
+  animation: ticketIn 0.6s var(--ease-spring) both;
+}
+
+@keyframes ticketIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) rotate(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.confirmation-top {
+  background: var(--moss);
+  color: var(--cream);
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.confirmation-top::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: radial-gradient(circle, var(--white) 6px, transparent 6px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--gold);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.success-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.confirmation-top h1 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.confirmation-message {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.confirmation-body {
+  padding: 2rem;
+}
+
+.confirmation-details,
+.customer-info,
+.important-info,
+.shop-hours {
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-details h2,
+.customer-info h2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed var(--paper-dark);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  gap: 1rem;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--paper);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.detail-row .value {
+  font-weight: 600;
+  color: var(--ink);
+  text-align: right;
+}
+
+.detail-row .value.mono {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  color: var(--rust);
+}
+
+.customer-info p {
+  margin: 0.35rem 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.important-info h3,
+.shop-hours h3 {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 0.65rem;
+}
+
+.important-info ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.important-info li {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+
+.shop-hours p {
+  margin: 0.25rem 0;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.confirmation-actions .btn-primary {
+  flex: 1 1 180px;
+}
+
+.confirmation-actions .btn-ghost {
+  flex: 1 1 140px;
+  justify-content: center;
+}
+
+.thank-you {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 2px dashed var(--paper-dark);
+  text-align: center;
+}
+
+.thank-you p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+@media print {
+  .confirmation-actions {
+    display: none;
+  }
+
+  .confirmation-card {
+    box-shadow: none;
+  }
+}

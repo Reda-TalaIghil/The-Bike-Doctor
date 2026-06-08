@@ -1,0 +1,43 @@
+:root {
+  /* Workshop palette — warm paper, ink, rust, moss */
+  --ink: #1a1714;
+  --ink-soft: #3d3830;
+  --ink-muted: #6b635a;
+  --paper: #f6f1e8;
+  --paper-warm: #ede6d9;
+  --paper-dark: #ddd4c4;
+  --cream: #faf7f2;
+
+  --rust: #c04e28;
+  --rust-deep: #9a3a1c;
+  --rust-glow: rgba(192, 78, 40, 0.18);
+  --moss: #3d5a45;
+  --moss-light: #5a7d62;
+  --gold: #c9a227;
+  --gold-soft: #f0dfa0;
+
+  --white: #fffcf8;
+  --error: #b91c1c;
+  --success: #2d6a4f;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 2px 16px rgba(26, 23, 20, 0.06);
+  --shadow-lift: 0 12px 40px rgba(26, 23, 20, 0.12);
+  --shadow-sticker: 3px 3px 0 var(--ink);
+
+  --max-width: 1080px;
+  --nav-height: 68px;
+  --footer-height: 72px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
